@@ -1,0 +1,29 @@
+!SESSION 2011-12-16 09:24:02.352 -----------------------------------------------
+eclipse.buildId=2.8.1.201111221000-RELEASE
+java.version=1.6.0_29
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide -product com.springsource.sts.ide -product com.springsource.sts.ide -keyring /Users/johnervine/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch x86 -product com.springsource.sts.ide -product com.springsource.sts.ide -data /Users/johnervine/Documents/spitter -product com.springsource.sts.ide -keyring /Users/johnervine/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-12-16 09:24:24.198
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2011-12-16 09:32:29.892
+!MESSAGE No repository found at http://m2eclipse.sonatype.org/update.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2011-12-16 09:32:57.790
+!MESSAGE Unable to read repository at http:..m2eclipse.sonatype.org/update/content.xml.
+!STACK 0
+java.lang.IllegalArgumentException: Host name may not be null
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:68)
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:107)
+	at org.apache.commons.httpclient.HttpMethodBase.setURI(HttpMethodBase.java:280)
+	at org.apache.commons.httpclient.HttpMethodBase.<init>(HttpMethodBase.java:220)
+	at org.apache.commons.httpclient.methods.HeadMethod.<init>(HeadMethod.java:94)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:212)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2011-12-16 09:34:00.222
+!MESSAGE No repository found at http://eclipse.org/m2e.
